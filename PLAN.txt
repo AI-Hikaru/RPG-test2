@@ -1,0 +1,27 @@
+# RPG Game Structure Plan
+
+## Overview
+This project is a browser-based RPG featuring a cute girl adventurer. The entire UI is rendered on a single `<canvas>` element. No external libraries will be used; everything is written in modern ES2023+ JavaScript.
+
+## File Structure
+- `index.html` — Contains only the canvas element and loads `main.js` as an ES module.
+- `main.js` — Entry point that initializes the canvas and starts the game loop.
+- `engine/`
+  - `canvas.js` — Canvas setup and basic drawing utilities.
+  - `input.js` — Manages keyboard and pointer events.
+  - `scene.js` — Scene management (e.g., title screen, map, battle, menu).
+  - `sprite.js` — Handles sprite animation and asset loading.
+- `game/`
+  - `player.js` — Player character logic, including movement and stats.
+  - `world.js` — Map and environment handling.
+  - `battle.js` — Simple turn-based battle system.
+  - `ui.js` — UI components rendered on the canvas (dialog boxes, menu options, etc.).
+- `assets/` — Images and data files.
+
+## Development Notes
+- Use ES modules (`import`/`export` syntax) for code organization.
+- Game loop will leverage `requestAnimationFrame` for smooth animations.
+- Use async asset loading with `fetch` and `ImageBitmap`.
+- Maintain game state using classes and modern features (e.g., private class fields, optional chaining).
+- Focus on modularity so additional levels or features can be added easily.
+
