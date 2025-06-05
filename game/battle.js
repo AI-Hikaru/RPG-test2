@@ -1,0 +1,2 @@
+// バトルシステムのプレースホルダー
+export class Battle {}
